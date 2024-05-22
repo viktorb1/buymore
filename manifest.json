@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "BuyMore - Track new listings on Mercari, Offerup, Craiglist and BuyMore",
+    "description": "Track new listings on Mercari, Offerup, Craiglist and BuyMore when you press submit",
+    "version": "1.0.0",
+    "icons": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "permissions": [
+      "storage", 
+      "webRequest",
+      "background",
+      "alarms"
+    ],
+    "background": {
+      "service_worker": "src/scripts/background-script.ts",
+      "persistent": false
+    },
+    "action": {
+    },
+    "options_page": "src/web/settings.html",
+    "host_permissions": ["https://www.mercari.com/v1", "https://buyerapi.shopgoodwill.com/api/", "https://offerup.com/api", "https://www.ebay.com/", "https://sapi.craigslist.org/"]
+}
+
